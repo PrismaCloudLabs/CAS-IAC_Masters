@@ -95,6 +95,11 @@ resource "aws_db_instance" "example_db" {
     git_repo             = "codegoat"
     yor_trace            = "402cb8e8-703c-4778-af81-f322be4fc5d9"
   })
+  performance_insights_kms_key_id = "CKV_ANY"
+  deletion_protection = true
+  iam_database_authentication_enabled = true
+  monitoring_interval = true
+  auto_minor_version_upgrade = true
 }
 
 resource "aws_ssm_parameter" "example_ssm_db_host" {
