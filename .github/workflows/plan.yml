@@ -6,7 +6,7 @@ on:
 env:
   TF_CLOUD_ORGANIZATION: "EM_Prisma_Cloud"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "prisma-cloud"
+  TF_WORKSPACE: "cas-masters"
   CONFIG_DIRECTORY: "./deploy"
 
 jobs:

@@ -8,8 +8,8 @@ on:
 env:
   TF_CLOUD_ORGANIZATION: "EM_Prisma_Cloud"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "prisma-cloud"
-  CONFIG_DIRECTORY: "./"
+  TF_WORKSPACE: "cas-masters"
+  CONFIG_DIRECTORY: "./deploy"
 
 jobs:
   terraform:
@@ -20,8 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          path: deploy
 
       - name: Upload Configuration
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
